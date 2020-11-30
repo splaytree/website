@@ -7,20 +7,18 @@
   --gray: #6c757d;
   --white: #ffffff;
   --gray-dark: #343a40;
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --breakpoint-lg: 992px;
   --gray-light: #cccccc;
-  --breakpoint-md: 768px;
+  --breakpoint-xs: 0px;
   --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --breakpoint-xs: 0;
 }
 
 body {
   background-color: #ffffff;
   color: #212529;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -39,37 +37,52 @@ dl, ol, ul {
   margin-top: 0;
 }
 
-nav {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  position: sticky;
-  width: 100%;
-  z-index: 1;
-  padding: 0 16px;
-}
-
-nav ul {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  padding: 0;
-}
-
-
-nav a {
-  color: var(--white);
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
 section {
-  padding: 150px 25%;
-  position: relative;
   display: flex;
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
+  padding: 4vh 6vw;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  section,footer {
+    padding: 4vh 12vw;
+  }
+}
+
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 992px) {
+  section,footer {
+    padding: 4vh 16vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  section, footer {
+    padding: 4vh 20vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+}
+
+header > section > * {
+  text-align: center;
+}
+
+header > section > h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+header > section {
+  margin-bottom: 20px;
 }
 
 section#services {
@@ -77,29 +90,66 @@ section#services {
 }
 
 img {
-  vertical-align: middle;
   border-style: none;
   object-fit: cover;
+  vertical-align: middle;
 }
 
 header {
-  color: var(--white);
-  background-image: linear-gradient(rgba(34, 84, 153, 0.8), rgba(34, 84, 153, 0.8)), url("img/math.jpg");
-  background-size: cover;
-  background-position: center;
+  align-items: center;
   backdrop-filter: blur(4px);
-  height: 350px;
-  overflow: hidden;
-  position: relative;
+  background-image: linear-gradient(rgba(34, 84, 153, 0.8), rgba(34, 84, 153, 0.8)), url("img/math.jpg");
+  background-position: center;
+  background-size: cover;
+  color: var(--white);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  position: sticky;
+  width: 100%;
+  z-index: 1;
+}
+
+nav ul {
   align-items: center;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0px 8px 0px 0px;
+}
+
+nav a {
+  color: var(--white);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 header img.logo {
-  height: 75px;
-  width: 75px;
+  padding-top: 8px;
+  height: 64px;
 }
+
+@media screen and (min-width: 768px) {
+  nav {
+    flex-direction: row;
+  }
+
+  nav ul > li {
+    font-size: 22px;
+  }
+
+  header img.logo {
+    height: 80px;
+  }
+}
+
 
 footer {
   background-color: var(--gray-dark);
@@ -110,33 +160,12 @@ footer {
 }
 
 footer img.logo {
-  height: 93px;
-  width: 93px;
-  margin-bottom: 5px;
+  height: 100px;
+  margin-bottom: 24px;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px
-  }
+footer p {
+  font-size: 20px;
 }
 
 h1,
@@ -147,7 +176,8 @@ h5,
 h6 {
   font-weight: 500;
   line-height: 1.2;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 h1 {
@@ -183,21 +213,3 @@ p {
   font-size: 1.25rem;
   font-weight: 300;
 }
-
-p.lead {
-
-}
-
-.header-bg {
-  background-image: linear-gradient(rgba(34, 84, 153, 0.8), rgba(34, 84, 153, 0.8)), url("img/math.jpg");
-  background-position: center;
-  bottom: -5px;
-  filter: blur(4px);
-  height: 100%;
-  position: absolute;
-  top: -5px;
-  transform: scale(1.1);
-  width: 100%;
-  z-index: -1;
-}
-
