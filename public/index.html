@@ -31,14 +31,19 @@ and engineering investment portfolios that consistently outperform the market in
   <link href="style.css" rel="stylesheet" type="text/css">
 
   <!-- Favicon -->
-  <link href="img/logo.png" rel="icon" sizes="16x16" type="image/png">
+  <link href="/img/logo.png" rel="icon" sizes="16x16" type="image/png">
   <link rel="apple-touch-icon" href="/img/logo.png">
 
 
-  <!-- Firebase web application initialization scripts -->
-  <script defer src="/__/firebase/8.1.1/firebase-app.js"></script>
-  <script defer src="/__/firebase/8.1.1/firebase-analytics.js"></script>
-  <script defer src="/__/firebase/8.1.1/firebase-performance.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script defer src="/__/firebase/8.2.8/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+  https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script defer src="/__/firebase/8.2.8/firebase-analytics.js"></script>
+  <script defer src="/__/firebase/8.2.8/firebase-performance.js"></script>
+
+  <!-- Initialize Firebase -->
   <script defer src="/__/firebase/init.js"></script>
   <script defer src="/main.js"></script>
 </head>
@@ -47,7 +52,7 @@ and engineering investment portfolios that consistently outperform the market in
   <header>
     <nav>
       <a href="/">
-        <img alt="" class="logo" src="img/logo.svg">
+        <img alt="" class="logo" src="/img/logo.svg">
       </a>
       <ul>
         <li>

@@ -1,16 +1,13 @@
 {
   "hosting": {
+    "site": "splaytree",
     "public": "public",
+    "trailingSlash": false,
+    "cleanUrls": true,
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
     ]
   }
 }
